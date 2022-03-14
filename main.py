@@ -1,5 +1,5 @@
 from scheduler import Scheduler
-from world import World
+from countries import Countries
 from resources import housing, metallic_alloys, electronics
 import utils
 import heapq
@@ -13,10 +13,10 @@ def my_country_scheduler(your_country_name,resources_filename,
   
 transform_resources = [housing, metallic_alloys, electronics]
     
-world = World(your_country_name, transform_resources,
+countries = Countries(your_country_name, transform_resources,
               initial_state_filename, resources_filename)
     
-scheduler = Scheduler(world)
+scheduler = Scheduler(countries)
     
 resource = scheduler.search(depth_bound, frontier_max_size)
     
