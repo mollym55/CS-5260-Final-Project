@@ -19,7 +19,7 @@ class Transfer:
     def toString(self):
         resource = self.trade[0]
         quantity = self.trade[1]
-        string = "(TRANSFER FROM " + self.recieve + " TO " + \
+        string = "(Recieved from " + self.recieve + " Deliver to " + \
             self.deliver + " (" + resource + " " + str(quantity) + "))"
         return string
 
