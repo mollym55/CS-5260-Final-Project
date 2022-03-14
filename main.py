@@ -32,7 +32,7 @@ for i in range(0, num_output_schedules):
 myCountry = "Carpania"
 
 initialStatePath = "initial_countries.xlsx"
-resourcePath = "Samplr-Resources.xlsx"
+resourcePath = "Sample-Resources.xlsx"
 output = "results/example"
 numberOutput = 10
 
