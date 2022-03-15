@@ -68,8 +68,7 @@ def calculate_success_probability(myCountry, currentState, nextState, action, re
             other = recievedCountry
         else:
             other = deliveredCountry
-        payout = calculate_state_quality(nextState, other, resourcePath) - 
-                      calculate_state_quality(currentState, other, resourcePath)
+        payout = calculate_state_quality(nextState, other, resourcePath) - calculate_state_quality(currentState, other, resourcePath)
         return logistic(payout, 1, 1)
    
     if isinstance(action, Transform):
