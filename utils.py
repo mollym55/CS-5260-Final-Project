@@ -94,8 +94,6 @@ def calculate_state_quality(state, country, path):
         weighted_sum = weighted_sum + \
                 (comfortable[resource] * resource_value) + \
                 (difference * resource_value / 2)
-        else:
-            weighted_sum = weighted_sum + (resource_quantity * resource_value)
 
     normalized = weighted_sum / population
     
