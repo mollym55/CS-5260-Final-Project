@@ -18,7 +18,7 @@ def my_country_scheduler(your_country_name,resources_filename,
             print("Completed the search, now writing to the output file:")    
             for i in range(0, num_output_schedules):
                 print("Schedule", i + 1)
-                schedule = heapq.heappop(resource).getSchedule()
+                schedule = heapq.heappop(resource).getPartial()
                 utils.write_to_file(output_schedule_filename, schedule, i + 1)
                 print("-----------------------------------------")
 
