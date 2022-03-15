@@ -10,23 +10,17 @@ def my_country_scheduler(your_country_name,resources_filename,
             initial_state_filename,output_schedule_filename,
             num_output_schedules,depth_bound,
             frontier_max_size):
-  
-transform_resources = [housing, metallic_alloys, electronics]
-    
-countries = Countries(your_country_name, transform_resources,
-              initial_state_filename, resources_filename)
-    
-scheduler = Scheduler(countries)
-    
-resource = scheduler.search(depth_bound, frontier_max_size)
-    
-print("Completed the search, now writing to the output file:")
-    
-for i in range(0, num_output_schedules):
-    print("Schedule", i + 1)
-    schedule = heapq.heappop(resource).getSchedule()
-    utils.write_to_file(output_schedule_filename, schedule, i + 1)
-    print("-----------------------------------------")
+            transform_resources = [housing, metallic_alloys, electronics] 
+            countries = Countries(your_country_name, transform_resources,
+                          initial_state_filename, resources_filename)   
+            scheduler = Scheduler(countries)  
+            resource = scheduler.search(depth_bound, frontier_max_size)    
+            print("Completed the search, now writing to the output file:")    
+            for i in range(0, num_output_schedules):
+                print("Schedule", i + 1)
+                schedule = heapq.heappop(resource).getSchedule()
+                utils.write_to_file(output_schedule_filename, schedule, i + 1)
+                print("-----------------------------------------")
 
 
 myCountry = "Carpania"
