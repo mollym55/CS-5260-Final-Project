@@ -64,6 +64,6 @@ class Scheduler:
                         #if nextState not in visited:
                            # heapq.heappush(pq, nextItem)
                             
-                            if len(pq) > maxSize:
-                                pq.pop()
+                        if len(pq) > maxSize:
+                              pq.pop()
         return result
