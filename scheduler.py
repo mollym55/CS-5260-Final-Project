@@ -36,7 +36,7 @@ class Scheduler:
         result = []
         
         startState = self.countries.getStateStatus()
-        item = Partial(0, startState, [])
+        item = Part(0, startState, [])
         heapq.heappush(pq, item)
         while pq:
             cur = heapq.heappop(pq)
@@ -59,7 +59,7 @@ class Scheduler:
                         nextUtility = self.countries.getExpectedUtility(state, nextState, len(schedule) + 1, nextAction)
                         
                         nextSchedule = schedule + [[nextAction.toString(), nextUtility]]
-                        nextItem = Partial(-1 * nextUtility, nextState,
+                        nextItem = Part(-1 * nextUtility, nextState,
                                         copy.deepcopy(nextSchedule))
                         if nextState not in visited:
                             heapq.heappush(pq, nextItem)
