@@ -69,7 +69,7 @@ class Scheduler:
                     for successor in self.countries.getSuccessors(state):
                         nextState = successor[0]
                         nextAction = successor[1]
-                        nextExpectedUtility = self.countries.getExpectedUtility(state, nextState, len(schedule) + 1, nextAction, multiplier)
+                        nextExpectedUtility = self.countries.getExpectedUtility(state, nextState, len(schedule) + 1, nextAction)
                         nextSchedule = schedule + [[nextAction.toString(), nextExpectedUtility]]
                         nextPartial = Partial(-1 * nextExpectedUtility, nextState,
                                         copy.deepcopy(nextSchedule))
