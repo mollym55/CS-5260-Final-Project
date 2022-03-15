@@ -5,7 +5,7 @@ housing = {
 
 metallic_alloys = {
     "in": {"R1": 1, "R2": 2},
-    "out": {"R1": 1, "R21": 1, "R21''": 1}
+    "out": {"R1": 1, "R21": 1, "R21'": 1}
 }
 
 electronics = {
