@@ -60,7 +60,7 @@ def logistic(payout, k, L):
 # calculate_success_probability calculates success rate of country
 def calculate_success_probability(myCountry, currentState, nextState, action, resourcePath):
     
-    if isInstance(action, Transfer):
+    if isinstance(action, Transfer):
         recievedCountry = action.isRecievedFrom()
         deliveredCountry = action.isDeliveredTo()
         other = ""
