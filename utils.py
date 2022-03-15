@@ -89,7 +89,6 @@ def calculate_state_quality(state, country, path):
         resource_quantity = country_resources[resource]
         resource_value = resources_df[resources_df['Resource']
                                       == resource]['Weight'].iloc[0]
-
         difference = resource_quantity - comfortable[resource]
         weighted_sum = weighted_sum + \
                 (comfortable[resource] * resource_value) + \
