@@ -47,7 +47,7 @@ class Scheduler:
         self.countries = countries
     
     # search searches for the best schedule
-    def search(self, maxDepth, maxSize):
+    def search(self, maxDepth, maxSize, multiplier):
         part = []
         visited = []
         results = []
