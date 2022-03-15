@@ -50,7 +50,7 @@ class Countries:
         return successors
     
     # getExpectedUtility calculates EU to a country of a schedule
-    def getExpectedUtility(self, currentState, nextState, length, action, multiplier):
+    def getExpectedUtility(self, currentState, nextState, length, action):
         startQuality = utils.calculate_state_quality(self.stateStatus, self.myCountry, self.resourcePath)
         endQuality = utils.calculate_state_quality(nextState, self.myCountry, self.resourcePath)
         gamma = 0.97
@@ -58,7 +58,7 @@ class Countries:
         discountedReward = (gamma ** length) * reward
         probabilitySuccess = utils.calculate_success_probability(
             self.myCountry, currentState, nextState, action, self.resourcePath)
-        failure_cost = -discounted_reward * multiplier
+        failure_cost = -discounted_reward * -1
         eu = probability_success * discounted_reward + \
             (1 - probability_success) * failure_cost
         return eu
