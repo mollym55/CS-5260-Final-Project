@@ -13,7 +13,7 @@ class Transform:
     
     def execute(self):
         inputs = self.resources["in"]
-        outputs = self.resources["output"]
+        outputs = self.resources["out"]
         for res in inputs:
             self.state[self.country][res] = self.state[self.country][res] - inputs[res] * self.multiplier
         for res in outputs:
@@ -22,8 +22,8 @@ class Transform:
         
     def toString(self):
         string = "(Transfrom " + self.country + " inputs ("
-        inputs = self.resources["input"]
-        outputs = self.resources["output"]
+        inputs = self.resources["in"]
+        outputs = self.resources["out"]
         for res in inputs:
             string = string + "(" + res + " " + str(inputs[res] * self.multiplier) + ")"
         string = string + ") OUTPUTS("
