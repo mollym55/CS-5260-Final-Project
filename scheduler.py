@@ -21,6 +21,28 @@ class Part:
     # getPartial returns partial schedule
     def getPartial(self):
         return self.partial
+      
+      # __lt__
+    # this is the < operator
+    # note: if two partial schedules have the same expected utility,
+    #       the one with fewer actions is larger
+    # @other(obj): an object
+    def __lt__(self, other):
+        if isinstance(other, Part):
+            if self.expectedUtility == other.expectedUtility:
+                return len(self.partial) > len(other.partial)
+            else:
+                return self.expectedUtility < other.expectedUtility
+        else:
+            return False
+    # __le__
+    # this is the <= operator
+    # @other(obj): an object
+    def __le__(self, other):
+        if isinstance(other, Part):
+            return self.expectedUtility <= other.expectedUtility
+        else:
+            return False
 
 # The Scheduler class is the research algorithm
 class Scheduler:
