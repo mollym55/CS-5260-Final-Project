@@ -12,7 +12,7 @@ class Transform:
         self.multiplier = multiplier
     
     def execute(self):
-        inputs = self.resources["input"]
+        inputs = self.resources["in"]
         outputs = self.resources["output"]
         for res in inputs:
             self.state[self.country][res] = self.state[self.country][res] - inputs[res] * self.multiplier
