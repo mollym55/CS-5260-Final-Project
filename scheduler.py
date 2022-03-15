@@ -22,22 +22,6 @@ class Partial:
     def getSchedule(self):
         return self.schedule
     
-    # __lessthan__ represents < operator
-    def __lessthan__(self, other):
-        if isinstance(other, Partial):
-            if self.expectedUtility == other.expectedUtility:
-                return len(self.schedule) > len(other.schedule)
-            else:
-                return self.expectedUtility < other.expectedUtility
-        else:
-            return False
-          
-    # __lessequal__ represents <= operator
-    def __lessequal__(self, other):
-        if isinstance(other, Partial):
-            return self.expectedUtility <= other.expectedUtility
-        else:
-            return False
 
 # The Scheduler class is the research algorithm
 class Scheduler:
