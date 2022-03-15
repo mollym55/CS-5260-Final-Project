@@ -97,7 +97,7 @@ def calculate_state_quality(state, country, path):
 
     normalized = weighted_sum / population
     
-return normalized
+    return normalized
 
 # generate_trades
 # this generates a list of economical transfer operations for myCountry at the given state
