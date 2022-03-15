@@ -61,9 +61,9 @@ class Scheduler:
                         nextSchedule = schedule + [[nextAction.toString(), nextUtility]]
                         nextItem = Part(-1 * nextUtility, nextState,
                                         copy.deepcopy(nextSchedule))
-                        #if nextState not in visited:
-                           # heapq.heappush(pq, nextItem)
+                        if nextState not in visited:
+                            heapq.heappush(pq, nextItem)
                             
-                        if len(pq) > maxSize:
-                              pq.pop()
+                          if len(pq) > maxSize:
+                                pq.pop()
         return result
