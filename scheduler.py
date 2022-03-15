@@ -71,10 +71,10 @@ class Scheduler:
                         nextAction = successor[1]
                         nextExpectedUtility = self.countries.getExpectedUtility(state, nextState, len(schedule) + 1, nextAction)
                         nextSchedule = schedule + [[nextAction.toString(), nextExpectedUtility]]
-                        nextItem = Partial(-1 * nextExpectedUtility, nextState,
+                        nextPartial = Partial(-1 * nextExpectedUtility, nextState,
                                         copy.deepcopy(nextSchedule))
                         if nextState not in visited:
-                            heapq.heappush(part, nextItem)
+                            heapq.heappush(part, nextPartial)
                        
                             if len(part) > maxSize:
                                 part.pop()
