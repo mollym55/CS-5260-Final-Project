@@ -35,7 +35,7 @@ def calculate_transform_max_multiplier(resources, template):
         if res in comfort.keys():
 
             available = resources[res] - \
-                int(comfortable_level[res] * population * 0.2)
+                int(comfort[res] * population * 0.2)
 
             if available > 0:
                 if multiplier == -1:
