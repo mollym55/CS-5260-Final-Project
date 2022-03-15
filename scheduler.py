@@ -66,7 +66,7 @@ class Scheduler:
                 if state not in visited:
                     visited.append(state) #populates state in visited array
 
-                    for successor in self.countires.getSuccessors(state):
+                    for successor in self.countries.getSuccessors(state):
                         nextState = successor[0]
                         nextAction = successor[1]
                         nextExpectedUtility = self.countries.getExpectedUtility(state, nextState, len(schedule) + 1, nextAction, multiplier)
