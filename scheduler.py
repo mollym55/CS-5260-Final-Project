@@ -1,27 +1,26 @@
 import heapq
 import copy
 
-# The Partial class represents partial schedule
-class Partial:
+# # The Part class represents partial schedule
+class Part:
   
-    # __init__ constructs Partial object
-    def __init__(self, expectedUtility, state, schedule):
+    # __init__ contructs Part object
+    def __init__(self, expectedUtility, state, partial):
         self.expectedUtility = expectedUtility
         self.state = state
-        self.schedule = schedule
+        self.partial = partial
     
-    # getExpectedUtility returns expected utility
+    # getUtility returns expected utility
     def getExpectedUtility(self):
         return self.expectedUtility
     
-    # getState returns state of countries
+    # getState returns state
     def getState(self):
         return self.state
     
-    # getSchedule returns schedule
-    def getSchedule(self):
-        return self.schedule
-    
+    # getPartial returns partial schedule
+    def getPartial(self):
+        return self.partial
 
 # The Scheduler class is the research algorithm
 class Scheduler:
@@ -32,34 +31,39 @@ class Scheduler:
     
     # search searches for the best schedule
     def search(self, maxDepth, maxSize):
-        part = []
+        pq = []
         visited = []
-        results = []
-        stateStatus = self.countries.getStateStatus()
-        partial = Partial(0, stateStatus, [])
-        heapq.heappush(part, partial)
-        while part:
-            curr = heapq.heappop(part)
-            state = curr.getState()
-            schedule = curr.getSchedule()
+        result = []
+        
+        startState = self.countries.getStateStatus()
+        item = Partial(0, startState, [])
+        heapq.heappush(pq, item)
+        while pq:
+            cur = heapq.heappop(pq)
+            
+            state = cur.getState()
+            schedule = cur.getPartial()
             
             if len(schedule) == maxDepth:
-                heapq.heappush(results, curr)
-           
+               
+                heapq.heappush(result, cur)
+            
             else:
                 if state not in visited:
-                    visited.append(state) #populates state in visited array
-
+                    
+                    visited.append(state)
+                    
                     for successor in self.countries.getSuccessors(state):
                         nextState = successor[0]
                         nextAction = successor[1]
-                        nextExpectedUtility = self.countries.getExpectedUtility(state, nextState, len(schedule) + 1, nextAction)
-                        nextSchedule = schedule + [[nextAction.toString(), nextExpectedUtility]]
-                        nextPartial = Partial(-1 * nextExpectedUtility, nextState,
+                        nextUtility = self.countries.getExpectedUtility(state, nextState, len(schedule) + 1, nextAction)
+                        
+                        nextSchedule = schedule + [[nextAction.toString(), nextUtility]]
+                        nextItem = Partial(-1 * nextUtility, nextState,
                                         copy.deepcopy(nextSchedule))
                         if nextState not in visited:
-                            heapq.heappush(part, nextPartial)
-                       
-                            if len(part) > maxSize:
-                                part.pop()
-        return results
+                            heapq.heappush(pq, nextItem)
+                            
+                            if len(pq) > maxSize:
+                                pq.pop()
+        return result
