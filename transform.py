@@ -3,6 +3,8 @@ import copy
 
 # The Transform class represents TRANSFORMations that happen between countries
 class Transform:
+    
+    # __init___ constructs Transform object
     def __init__(self, state, country, resources, multiplier = 1):
         self.state = copy.deepcopy(state)
         self.country = country
@@ -12,21 +14,21 @@ class Transform:
     def execute(self):
         inputs = self.resources["input"]
         outputs = self.resources["output"]
-        for r_type in inputs:
-            self.state[self.country][r_type] = self.state[self.country][r_type] - inputs[r_type] * self.multiplier
-        for r_type in outputs:
-            self.state[self.country][r_type] = self.state[self.country][r_type] + outputs[r_type] * self.multiplier
+        for res in inputs:
+            self.state[self.country][res] = self.state[self.country][res] - inputs[res] * self.multiplier
+        for res in outputs:
+            self.state[self.country][res] = self.state[self.country][res] + outputs[res] * self.multiplier
         return self.state
         
     def toString(self):
-        string = "(TRANSFORM " + self.country + " INPUTS ("
+        string = "(Transfrom " + self.country + " inputs ("
         inputs = self.resources["input"]
         outputs = self.resources["output"]
-        for r_type in inputs:
-            string = string + "(" + r_type + " " + str(inputs[r_type] * self.multiplier) + ")"
+        for res in inputs:
+            string = string + "(" + res + " " + str(inputs[res] * self.multiplier) + ")"
         string = string + ") OUTPUTS("
-        for r_type in outputs:
-            string = string + "(" + r_type + " " + str(outputs[r_type] * self.multiplier)+ ")"
+        for res in outputs:
+            string = string + "(" + res + " " + str(outputs[res] * self.multiplier)+ ")"
         string = string + "))"
         string = string + str(self.multiplier)
         return string
