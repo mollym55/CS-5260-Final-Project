@@ -22,7 +22,7 @@ class Countries:
             initialStates[row["Country"]]["R21"] = row["R21"]
             initialStates[row["Country"]]["R22"] = row["R22"]
             initialStates[row["Country"]]["R23"] = row["R23"]
-            initialStates[row["Country"]]["R1'"] = row["R1'"]
+            #initialStates[row["Country"]]["R1'"] = row["R1'"]
             initialStates[row["Country"]]["R21'"] = row["R21'"]
             initialStates[row["Country"]]["R22'"] = row["R22'"]
             initialStates[row["Country"]]["R23'"] = row["R23'"]
