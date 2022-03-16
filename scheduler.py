@@ -22,11 +22,7 @@ class Part:
     def getPartial(self):
         return self.partial
       
-      # __lt__
-    # this is the < operator
-    # note: if two partial schedules have the same expected utility,
-    #       the one with fewer actions is larger
-    # @other(obj): an object
+      # __lt__ represents the < operator
     def __lt__(self, other):
         if isinstance(other, Part):
             if self.expectedUtility == other.expectedUtility:
@@ -35,9 +31,7 @@ class Part:
                 return self.expectedUtility < other.expectedUtility
         else:
             return False
-    # __le__
-    # this is the <= operator
-    # @other(obj): an object
+    # __le__ represents the <= operator
     def __le__(self, other):
         if isinstance(other, Part):
             return self.expectedUtility <= other.expectedUtility
@@ -53,22 +47,22 @@ class Scheduler:
     
     # search searches for the best schedule
     def search(self, maxDepth, maxSize):
-        pq = []
+        p = []
         visited = []
-        result = []
+        results = []
         
         startState = self.countries.getStateStatus()
-        item = Part(0, startState, [])
-        heapq.heappush(pq, item)
-        while pq:
-            cur = heapq.heappop(pq)
+        part = Part(0, startState, [])
+        heapq.heappush(p, part)
+        while p:
+            current = heapq.heappop(p)
             
-            state = cur.getState()
-            schedule = cur.getPartial()
+            state = current.getState()
+            schedule = current.getPartial()
             
             if len(schedule) == maxDepth:
                
-                heapq.heappush(result, cur)
+                heapq.heappush(results, current)
             
             else:
                 if state not in visited:
@@ -81,11 +75,11 @@ class Scheduler:
                         nextUtility = self.countries.getExpectedUtility(state, nextState, len(schedule) + 1, nextAction)
                         
                         nextSchedule = schedule + [[nextAction.toString(), nextUtility]]
-                        nextItem = Part(-1 * nextUtility, nextState,
+                        nextPart = Part(-1 * nextUtility, nextState,
                                         copy.deepcopy(nextSchedule))
                         if nextState not in visited:
-                            heapq.heappush(pq, nextItem)
+                            heapq.heappush(p, nextPart)
                             
-                            if len(pq) > maxSize:
-                                pq.pop()
-        return result
+                            if len(p) > maxSize:
+                                p.pop()
+        return results
