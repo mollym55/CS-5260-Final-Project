@@ -1,9 +1,10 @@
 import pandas as pd
 from transform import Transform
 from transfer import Transfer
-from belongings import comfort
 import numpy as np
 import os
+
+comfort = {'R2': 3, 'R3': 5, 'R4': 2, 'R21': 1.2, 'R22': 2, 'R23': 3}
 
 # getInitialState returns JSON formatted file
 def getInitialState(fileName, rowName):
