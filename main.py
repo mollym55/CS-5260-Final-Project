@@ -28,7 +28,7 @@ myCountry = "Carpania"
 initialStatePath = "initial_countries.xlsx"
 resourcePath = "Sample-Resources.xlsx"
 output = "results/example"
-numberOutput = 5
+numberOutput = 10
 
 timeOutputFile = open("results/runtimes.txt", "a")
 # Example 1: Depth_Bound = 5 and Frontier_Max_Size = 10 
