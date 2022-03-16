@@ -1,3 +1,4 @@
+#Transformation templates for housing, metallic alloys, and electronics
 housing = {
     "in": {"R1": 5, "R2": 1, "R3": 5, "R21": 3},
     "out": {"R23": 1, "R23'": 1, "R1": 5}
