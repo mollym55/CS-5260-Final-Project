@@ -53,7 +53,7 @@ class Countries:
     def getExpectedUtility(self, currentState, nextState, length, action):
         startQuality = utils.calculate_state_quality(self.stateStatus, self.myCountry, self.resourcePath)
         endQuality = utils.calculate_state_quality(nextState, self.myCountry, self.resourcePath)
-        gamma = 0.97
+        gamma = 0.99
         reward = endQuality - startQuality
         discountedReward = (gamma ** length) * reward
         probabilitySuccess = utils.calculate_success_probability(
