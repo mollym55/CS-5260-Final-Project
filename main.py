@@ -22,13 +22,13 @@ def my_country_scheduler(your_country_name,resources_filename,
                 utils.write_to_file(output_schedule_filename, schedule, i + 1)
                 print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
 
-
+#Randomly chose my country to be Carpania
 myCountry = "Carpania"
 
 initialStatePath = "initial_countries.xlsx"
 resourcePath = "Sample-Resources.xlsx"
 output = "results/example"
-numberOutput = 10
+numberOutput = 5
 
 timeOutputFile = open("results/runtimes.txt", "a")
 # Example 1: Depth_Bound = 5 and Frontier_Max_Size = 10 
