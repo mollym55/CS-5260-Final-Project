@@ -58,6 +58,7 @@ class Countries:
         discountedReward = (gamma ** length) * reward
         probabilitySuccess = utils.calculate_success_probability(
             self.myCountry, currentState, nextState, action, self.resourcePath)
+        # Chose a constant of -1 for the cost of the failure
         failure_cost = -discountedReward * -1
         eu = probabilitySuccess * discountedReward + \
             (1 - probabilitySuccess) * failure_cost
