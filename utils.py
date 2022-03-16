@@ -1,9 +1,10 @@
-import pandas as pd
 from transform import Transform
 from transfer import Transfer
+import pandas as pd
 import numpy as np
 import os
 
+# Comfort levels for the resources
 comfort = {'R2': 3, 'R3': 5, 'R4': 2, 'R21': 1.2, 'R22': 2, 'R23': 3}
 
 # getInitialState returns JSON formatted file
@@ -97,15 +98,7 @@ def calculate_state_quality(state, country, path):
     
     return normalized
 
-# generate_trades
-# this generates a list of economical transfer operations for myCountry at the given state
-# we define an "economical transfer" for part 1 to be:
-# a) importing resources that we need
-# b) exporting resources that we have in extra
-# @state(dict): the world state
-# @myCountry(str): the name of our country
-
-
+# generate_trades is a list of trade options for countries
 def generate_trades(state, myCountry):
     countryList = state.keys()
     # Can't trade population or waste
