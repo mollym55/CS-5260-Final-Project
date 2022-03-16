@@ -1,5 +1,5 @@
-import pandas as pd
 from transform import Transform
+import pandas as pd
 import utils
 
 # Countries Class calculates the expected utility to a country of a schedule
