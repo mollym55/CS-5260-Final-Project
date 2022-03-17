@@ -43,7 +43,7 @@ timeOutputFile.write("The runtime for example 1 is " +
                str(finishTime - startTime) + " seconds")
 timeOutputFile.write("\n")
 print("Time elapsed " + str(finishTime - startTime) + " seconds")
-plt.scatter(scheduler.getExpectedUtility(), finishTime)
+plt.scatter(Scheduler.getExpectedUtility(), finishTime)
 plt.show()
 
 # Example 2: Depth_Bound = 5 and Frontier_Max_Size = 5 
