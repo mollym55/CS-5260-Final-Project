@@ -22,8 +22,7 @@ def my_country_scheduler(your_country_name,resources_filename,
                 schedule = heapq.heappop(resource).getPartial()
                 utils.write_to_file(output_schedule_filename, schedule, i + 1)
                 print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
-            plt.scatter(i, heapq.heappop(resource).getExpectedUtility())
-            plt.show()
+            
                 
 
 #Randomly chose my country to be Carpania
