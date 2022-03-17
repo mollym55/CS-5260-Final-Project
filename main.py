@@ -71,7 +71,7 @@ timeOutputFile.write("The runtime for example 3 is " +
 timeOutputFile.write("\n")
 print("Time elapsed: " + str(time3) + " seconds")
 
-
+# Scatter Plot to show runtimes per each example 
 timeExamples = [time1,time2,time3]
 plt.scatter(example, timeExamples)
 plt.title("Runtime per each Example")
