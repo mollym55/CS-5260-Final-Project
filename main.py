@@ -22,6 +22,8 @@ def my_country_scheduler(your_country_name,resources_filename,
                 schedule = heapq.heappop(resource).getPartial()
                 utils.write_to_file(output_schedule_filename, schedule, i + 1)
                 print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
+                plt.scatter(schedule.getExpectedUtility(), finishTime)
+                plt.show()
                 
 
 #Randomly chose my country to be Carpania
@@ -43,8 +45,7 @@ timeOutputFile.write("The runtime for example 1 is " +
                str(finishTime - startTime) + " seconds")
 timeOutputFile.write("\n")
 print("Time elapsed " + str(finishTime - startTime) + " seconds")
-plt.scatter(Part.getExpectedUtility(), finishTime)
-plt.show()
+
 
 # Example 2: Depth_Bound = 5 and Frontier_Max_Size = 5 
 startTime = time.time()
