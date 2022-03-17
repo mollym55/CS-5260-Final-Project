@@ -75,5 +75,8 @@ print("Time elapsed: " + str(time3) + " seconds")
 timeExamples = [time1,time2,time3]
 plt.scatter(example, timeExamples)
 plt.show()
+plt.title("Runtime per each Example")
+plt.xlabel("Example")
+plt.ylabel("Runtime in Seconds")
 
 timeOutputFile.close()
