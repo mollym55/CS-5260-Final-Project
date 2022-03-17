@@ -68,4 +68,51 @@ timeOutputFile.write("The runtime for example 3 is " +
 timeOutputFile.write("\n")
 print("Time elapsed: " + str(finishTime - startTime) + " seconds")
 
+# Example 4: Depth_Bound = 15 and Frontier_Max_Size = 4 
+startTime = time.time()
+my_country_scheduler(myCountry, resourcePath,
+                     initialStatePath, output + "4.txt",
+                     numberOutput, 15, 4)
+finishTime = time.time()
+timeOutputFile.write("The runtime for example 4 is " +
+               str(finishTime - startTime) + " seconds")
+timeOutputFile.write("\n")
+print("Time elapsed: " + str(finishTime - startTime) + " seconds")
+
+# Example 5: Depth_Bound = 12 and Frontier_Max_Size = 6 
+startTime = time.time()
+my_country_scheduler(myCountry, resourcePath,
+                     initialStatePath, output + "5.txt",
+                     numberOutput, 12, 6)
+finishTime = time.time()
+timeOutputFile.write("The runtime for example 5 is " +
+               str(finishTime - startTime) + " seconds")
+timeOutputFile.write("\n")
+print("Time elapsed: " + str(finishTime - startTime) + " seconds")
+
+# Example 6: Depth_Bound = 8 and Frontier_Max_Size = 4 
+startTime = time.time()
+my_country_scheduler(myCountry, resourcePath,
+                     initialStatePath, output + "6.txt",
+                     numberOutput, 8, 4)
+finishTime = time.time()
+timeOutputFile.write("The runtime for example 6 is " +
+               str(finishTime - startTime) + " seconds")
+timeOutputFile.write("\n")
+print("Time elapsed: " + str(finishTime - startTime) + " seconds")
+
+# Example 7: Depth_Bound = 5 and Frontier_Max_Size = 8 
+startTime = time.time()
+my_country_scheduler(myCountry, resourcePath,
+                     initialStatePath, output + "7.txt",
+                     numberOutput, 5, 8)
+finishTime = time.time()
+timeOutputFile.write("The runtime for example 7 is " +
+               str(finishTime - startTime) + " seconds")
+timeOutputFile.write("\n")
+print("Time elapsed: " + str(finishTime - startTime) + " seconds")
+
+
+
+
 timeOutputFile.close()
