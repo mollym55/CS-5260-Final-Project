@@ -73,10 +73,7 @@ print("Time elapsed: " + str(time3) + " seconds")
 
 
 timeExamples = {time1,time2,time3}
-plt.scatter(example, timeExamples)
-plt.title('Runtimes per Search Example')
-plt.xlabel('Example')
-plt.ylabel('RunTime in Seconds')
+plt.plot(example, timeExamples)
 plt.show()
 
 timeOutputFile.close()
