@@ -73,7 +73,7 @@ print("Time elapsed: " + str(time3) + " seconds")
 
 
 timeExamples = {time1,time2,time3}
-plt.plot(example, timeExamples)
+plt.scatter(example, timeExamples)
 plt.show()
 
 timeOutputFile.close()
