@@ -60,6 +60,6 @@ class Countries:
             self.myCountry, currentState, nextState, action, self.resourcePath)
         # Chose a constant of -1 for the cost of the failure
         failure_cost = -discountedReward * -1
-        eu = probabilitySuccess * discountedReward + /
+        eu = probabilitySuccess * discountedReward + \
             (1 - probabilitySuccess) * failure_cost
         return eu
