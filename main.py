@@ -1,6 +1,7 @@
 from scheduler import Scheduler
 from countries import Countries
 from resources import housing, metallic_alloys, electronics
+import matplotlib.pyplot as plt
 import utils
 import heapq
 import time
@@ -21,6 +22,7 @@ def my_country_scheduler(your_country_name,resources_filename,
                 schedule = heapq.heappop(resource).getPartial()
                 utils.write_to_file(output_schedule_filename, schedule, i + 1)
                 print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
+                
 
 #Randomly chose my country to be Carpania
 myCountry = "Carpania"
@@ -41,6 +43,8 @@ timeOutputFile.write("The runtime for example 1 is " +
                str(finishTime - startTime) + " seconds")
 timeOutputFile.write("\n")
 print("Time elapsed " + str(finishTime - startTime) + " seconds")
+plt.scatter(schedule, finishTime)
+plt.show()
 
 # Example 2: Depth_Bound = 5 and Frontier_Max_Size = 5 
 startTime = time.time()
