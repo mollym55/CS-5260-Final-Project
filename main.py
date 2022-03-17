@@ -24,7 +24,7 @@ def my_country_scheduler(your_country_name,resources_filename,
                 print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
             
                 
-example = {1,2,3}
+example = [1,2,3]
 #Randomly chose my country to be Carpania
 myCountry = "Carpania"
 
@@ -72,7 +72,7 @@ timeOutputFile.write("\n")
 print("Time elapsed: " + str(time3) + " seconds")
 
 
-timeExamples = {time1,time2,time3}
+timeExamples = [time1,time2,time3]
 plt.scatter(example, timeExamples)
 plt.show()
 
