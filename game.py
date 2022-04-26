@@ -18,7 +18,7 @@ class Game:
     transform_resources = [housing, metallic_alloys, electronics] 
     countries = Countries(myCountry, transform_resources,
                               initialStatePath, resourcePath)   
-   def play():     
+    def play():     
         p1 = Player("Player")
         state = countries.getStateStatus()
         print("\nCountry Initial States")
