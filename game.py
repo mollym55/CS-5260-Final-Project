@@ -42,4 +42,4 @@ class Game:
         print("3. Exit")
         play = input("")
         
-      play()
+    play()
