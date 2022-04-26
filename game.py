@@ -36,3 +36,7 @@ class Game:
     print("Housing -> 500")
     print("Metallic Alloys -> 500")
     print("Electronics -> 75")
+    sleep(5)
+    print("\n1. Trade Resources")
+    print("2. Transform Resources")
+    print("3. Exit")
