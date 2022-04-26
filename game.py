@@ -11,15 +11,15 @@ class Player:
 class Game:
     
 #Randomly chose my country to be Carpania
-myCountry = "Carpania"
-initialStatePath = "initial_countries.xlsx"
-resourcePath = "Sample-Resources.xlsx"
-transform_resources = [housing, metallic_alloys, electronics] 
-countries = Countries(myCountry, transform_resources,
-                          initialStatePath, resourcePath)   
+    myCountry = "Carpania"
+    initialStatePath = "initial_countries.xlsx"
+    resourcePath = "Sample-Resources.xlsx"
+    transform_resources = [housing, metallic_alloys, electronics] 
+    countries = Countries(myCountry, transform_resources,
+                              initialStatePath, resourcePath)   
         
 
-p1 = Player("Player")
-state = countries.getStateStatus()
-print(state)
+    p1 = Player("Player")
+    state = countries.getStateStatus()
+    print(state)
 
