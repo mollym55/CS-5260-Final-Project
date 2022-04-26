@@ -41,3 +41,5 @@ class Game:
         print("2. Transform Resources")
         print("3. Exit")
         play = input("")
+        
+      play()
