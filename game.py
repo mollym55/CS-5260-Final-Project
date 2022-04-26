@@ -24,4 +24,4 @@ class Game:
     print("\nCountry Initial States")
     print("-----------------------\n")
     print(state)
-
+    print("\nHello! This is the Trade & Transfer Game")
