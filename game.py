@@ -20,3 +20,6 @@ countries = Countries(myCountry, transform_resources,
         
 
 p1 = Player("Player")
+state = countries.getStateStatus()
+print(state)
+
