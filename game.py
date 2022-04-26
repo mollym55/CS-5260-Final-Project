@@ -24,4 +24,6 @@ class Game:
     print("\nCountry Initial States")
     print("-----------------------\n")
     print(state)
-    print("\nHello! This is the Trade & Transfer Game")
+    print("\nHello Player! This is the Trade & Transfer Game!")
+    sleep(2)
+    print("Your country will be Carpania")
