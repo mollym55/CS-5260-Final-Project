@@ -21,7 +21,7 @@ class Game:
 
     p1 = Player("Player")
     state = countries.getStateStatus()
-    print("Country Start Statuses"
+    print("Country Start Statuses")
     print("------------------------------------------------\n")
     print(state)
 
