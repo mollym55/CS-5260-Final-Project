@@ -22,6 +22,7 @@ class Player:
         
 class Game:
     
+    obj = Game()
     def play():
         #Randomly chose my country to be Carpania
         myCountry = "Carpania"
@@ -213,7 +214,7 @@ class Game:
         print("2. No, I'm bored lol")
         choose_Dice = int(input(""))
         if choose_Dice == 1:
-            Game.playAgain()
+            obj.playAgain()
         if choose_Dice == 2:
             exit()
             
