@@ -3,7 +3,6 @@ from transfer import Transfer
 from countries import Countries
 from time import sleep
 import random
-from goto import goto, comefrom, label
 
 class Player:
 
