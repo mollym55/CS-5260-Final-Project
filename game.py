@@ -170,6 +170,32 @@ class Game:
             timber -= 200
             if timber <= 0:
                 print("You don't have anymore timber. The Wumpus won!")
+        elif dice_Value == 3:
+            print("You stepped in the Wumpus Dark Hole! You lose :(")
+        elif dice_Value == 4:
+            print("Whoop Whoop! You defeated the Wumpus!")
+        elif dice_Value == 5:
+            print("Boo, -300 to all resources")
+            metallic_Elements -= 300
+            timber -= 300
+            water -= 300
+            housing_Value -= 300
+            metallic_Alloys -= 300
+            electronics_Value -= 300
+            if metallic_Elements <= 0:
+                print("You don't have anymore metallic elements. The Wumpus won!")
+            if timber <= 0:
+                print("You don't have anymore timber. The Wumpus won!")
+            if water <= 0:
+                print("You don't have anymore water. The Wumpus won!")
+            if housing_Value <= 0:
+                print("You don't have anymore housing. The Wumpus won!")
+            if metallic_Alloys <= 0:
+                print("You don't have anymore metallic alloys. The Wumpus won!")
+            if electronics_Value <= 0:
+                print("You don't have anymore electronics. The Wumpus won!")
+        elif dice_Value == 6:
+            print("No change!")
         
        
         
