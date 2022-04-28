@@ -12,7 +12,8 @@ class Player:
         
 class Game:
     
-    
+    def exit1():
+        print("\nBye! Hope you had fun :)")
     
     def play():
         #Randomly chose my country to be Carpania
@@ -214,8 +215,7 @@ class Game:
     play()
     
     
-    def exit1():
-        print("\nBye! Hope you had fun :)")
+    
     
         
     
