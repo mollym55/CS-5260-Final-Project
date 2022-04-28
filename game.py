@@ -81,7 +81,7 @@ class Game:
         elif choose_Country == 5:
             myCountry = "Erewhon"
             print("\nYour country will be " + myCountry)
-        else 
+        elif 
             exit()
         
         print("\nCarpania's Resources (in millions):")
