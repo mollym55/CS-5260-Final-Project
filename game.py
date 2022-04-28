@@ -100,7 +100,7 @@ class Game:
         print("Timber -> ", timber)
         print("Water -> ", water)
         print("Housing -> ", housing_Value)
-        print("Metallic Alloys -> ", metallic_Alloys
+        print("Metallic Alloys -> ", metallic_Alloys)
         print("Electronics -> ", electronics_Value)
     
     def exit():
