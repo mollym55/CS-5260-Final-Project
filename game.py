@@ -71,16 +71,70 @@ class Game:
         elif choose_Country == 2:
             myCountry = "Brobdingnag"
             print("\nYour country will be ", myCountry)
+            metallic_Elements = 300
+            timber = 1200
+            water = 200
+            housing_Value = 300
+            metallic_Alloys = 200
+            electronics_Value = 900
+            print("\nYour Resources (in millions):")
+            print("Metallic Elements -> ", metallic_Elements)
+            print("Timber -> ", timber)
+            print("Water -> ", water)
+            print("Housing -> ", housing_Value)
+            print("Metallic Alloys -> ", metallic_Alloys)
+            print("Electronics -> ", electronics_Value)
         elif choose_Country == 3:
             myCountry = "Carpania"
             print("\nYour country will be ", myCountry)
+            metallic_Elements = 100
+            timber = 300
+            water = 320
+            housing_Value = 500
+            metallic_Alloys = 500
+            electronics_Value = 75
+            print("\nYour Resources (in millions):")
+            print("Metallic Elements -> ", metallic_Elements)
+            print("Timber -> ", timber)
+            print("Water -> ", water)
+            print("Housing -> ", housing_Value)
+            print("Metallic Alloys -> ", metallic_Alloys)
+            print("Electronics -> ", electronics_Value)
             
         elif choose_Country == 4:
             myCountry = "Dinotopia"
             print("\nYour country will be ", myCountry)
+            metallic_Elements = 200
+            timber = 200
+            water = 75
+            housing_Value = 600
+            metallic_Alloys = 75
+            electronics_Value = 100
+            print("\nYour Resources (in millions):")
+            print("Metallic Elements -> ", metallic_Elements)
+            print("Timber -> ", timber)
+            print("Water -> ", water)
+            print("Housing -> ", housing_Value)
+            print("Metallic Alloys -> ", metallic_Alloys)
+            print("Electronics -> ", electronics_Value)
+            
         elif choose_Country == 5:
             myCountry = "Erewhon"
             print("\nYour country will be ", myCountry)
+            metallic_Elements = 500
+            timber = 1700
+            water = 30
+            housing_Value = 150
+            metallic_Alloys = 40
+            electronics_Value = 300
+            print("\nYour Resources (in millions):")
+            print("Metallic Elements -> ", metallic_Elements)
+            print("Timber -> ", timber)
+            print("Water -> ", water)
+            print("Housing -> ", housing_Value)
+            print("Metallic Alloys -> ", metallic_Alloys)
+            print("Electronics -> ", electronics_Value)
+            
         else:
             exit()
         
