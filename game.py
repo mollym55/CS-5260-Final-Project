@@ -58,9 +58,9 @@ class Game:
             metallic_Elements = 700
             timber = 2000
             water = 50
-            housing = 100
+            housing_Value = 100
             metallic_Alloys = 200
-            electronics = 800
+            electronics_Value = 800
             print("\nYour Resources (in millions):")
             print("Metallic Elements -> " + metallic_Elements)
             print("Timber -> " + timber)
