@@ -13,7 +13,7 @@ class Game:
     
     def play():
         #Randomly chose my country to be Carpania
-        #myCountry = "Carpania"
+        myCountry = "Carpania"
         initialStatePath = "initial_countries.xlsx"
         resourcePath = "Sample-Resources.xlsx"
         transform_resources = [housing, metallic_alloys, electronics] 
