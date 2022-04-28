@@ -149,68 +149,68 @@ class Game:
         print("\nTime to Play!!!! Roll the dice!")
         sleep(2)
         
-            dice_Value = random.randint(min, max)
-            print("\nYou rolled ", dice_Value)
+        dice_Value = random.randint(min, max)
+        print("\nYou rolled ", dice_Value)
 
-            if dice_Value == 1:
-                print("Yay! +500 to each resource")
-                metallic_Elements += 500
-                timber += 500
-                water += 500
-                housing_Value += 500
-                metallic_Alloys += 500
-                electronics_Value += 500
-                print("\nYour Resources (in millions):")
-                print("Metallic Elements -> ", metallic_Elements)
-                print("Timber -> ", timber)
-                print("Water -> ", water)
-                print("Housing -> ", housing_Value)
-                print("Metallic Alloys -> ", metallic_Alloys)
-                print("Electronics -> ", electronics_Value)
-            elif dice_Value == 2:
-                print("Oh no! -200 to Timber")
-                timber -= 200
-                if timber <= 0:
-                    print("You don't have anymore timber. The Wumpus won!")
-                    exit()
-            elif dice_Value == 3:
-                print("You stepped in the Wumpus Dark Hole! You lose :(")
+        if dice_Value == 1:
+            print("Yay! +500 to each resource")
+            metallic_Elements += 500
+            timber += 500
+            water += 500
+            housing_Value += 500
+            metallic_Alloys += 500
+            electronics_Value += 500
+            print("\nYour Resources (in millions):")
+            print("Metallic Elements -> ", metallic_Elements)
+            print("Timber -> ", timber)
+            print("Water -> ", water)
+            print("Housing -> ", housing_Value)
+            print("Metallic Alloys -> ", metallic_Alloys)
+            print("Electronics -> ", electronics_Value)
+        elif dice_Value == 2:
+            print("Oh no! -200 to Timber")
+            timber -= 200
+            if timber <= 0:
+                print("You don't have anymore timber. The Wumpus won!")
                 exit()
-            elif dice_Value == 4:
-                print("Whoop Whoop! You defeated the Wumpus!")
+        elif dice_Value == 3:
+            print("You stepped in the Wumpus Dark Hole! You lose :(")
+            exit()
+        elif dice_Value == 4:
+            print("Whoop Whoop! You defeated the Wumpus!")
+            exit()
+        elif dice_Value == 5:
+            print("Boo, -300 to all resources")
+            metallic_Elements -= 300
+            timber -= 300
+            water -= 300
+            housing_Value -= 300
+            metallic_Alloys -= 300
+            electronics_Value -= 300
+            if metallic_Elements <= 0:
+                print("You don't have anymore metallic elements. The Wumpus won!")
                 exit()
-            elif dice_Value == 5:
-                print("Boo, -300 to all resources")
-                metallic_Elements -= 300
-                timber -= 300
-                water -= 300
-                housing_Value -= 300
-                metallic_Alloys -= 300
-                electronics_Value -= 300
-                if metallic_Elements <= 0:
-                    print("You don't have anymore metallic elements. The Wumpus won!")
-                    exit()
-                if timber <= 0:
-                    print("You don't have anymore timber. The Wumpus won!")
-                    exit()
-                if water <= 0:
-                    print("You don't have anymore water. The Wumpus won!")
-                    exit()
-                if housing_Value <= 0:
-                    print("You don't have anymore housing. The Wumpus won!")
-                    exit()
-                if metallic_Alloys <= 0:
-                    print("You don't have anymore metallic alloys. The Wumpus won!")
-                    exit()
-                if electronics_Value <= 0:
-                    print("You don't have anymore electronics. The Wumpus won!")
-                    exit()
-            elif dice_Value == 6:
-                print("Free Pass!")
+            if timber <= 0:
+                print("You don't have anymore timber. The Wumpus won!")
+                exit()
+            if water <= 0:
+                print("You don't have anymore water. The Wumpus won!")
+                exit()
+            if housing_Value <= 0:
+                print("You don't have anymore housing. The Wumpus won!")
+                exit()
+            if metallic_Alloys <= 0:
+                print("You don't have anymore metallic alloys. The Wumpus won!")
+                exit()
+            if electronics_Value <= 0:
+                print("You don't have anymore electronics. The Wumpus won!")
+                exit()
+       elif dice_Value == 6:
+           print("Free Pass!")
 
-            print("\nWhat to roll again?")
-            print("1. Yes")
-            print("2. No, I'm bored lol")
+       print("\nWhat to roll again?")
+       print("1. Yes")
+       print("2. No, I'm bored lol")
             
         
        
