@@ -22,9 +22,9 @@ class Game:
         metallic_Elements = 0
         timber = 0
         water = 0
-        housing = 0
+        housing_Value = 0
         metallic_Alloys = 0
-        electronics = 0
+        electronics_Value = 0
 
         p1 = Player("Player")
         state = countries.getStateStatus()
@@ -65,9 +65,9 @@ class Game:
             print("Metallic Elements -> " + metallic_Elements)
             print("Timber -> " + timber)
             print("Water -> " + water)
-            print("Housing -> " + housing)
+            print("Housing -> " + housing_Value)
             print("Metallic Alloys -> " + metallic_Alloys)
-            print("Electronics -> " + electronics)
+            print("Electronics -> " + electronics_Value)
         elif choose_Country == 2:
             myCountry = "Brobdingnag"
             print("\nYour country will be " + myCountry)
