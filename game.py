@@ -11,8 +11,7 @@ class Player:
         
 class Game:
     
-    def exit():
-        print("\nBye! Hope you had fun :)")
+    
     
     def play():
         #Randomly chose my country to be Carpania
@@ -141,24 +140,15 @@ class Game:
         else:
             exit()
         
-        print("\nCarpania's Resources (in millions):")
-        print("Metallic Elements -> 100")
-        print("Timber -> 300")
-        print("Water -> 320")
-        print("Housing -> 500")
-        print("Metallic Alloys -> 500")
-        print("Electronics -> 75")
         sleep(5)
-        print("\nTime to Play!!!!")
-        print("1. Trade Resources")
-        print("2. Transform Resources")
-        print("3. Exit")
-        play = input("")
+        print("\nTime to Play!!!! Roll the dice!")
+        
         
     play()
     
     
-    
+    def exit():
+        print("\nBye! Hope you had fun :)")
     
         
     
