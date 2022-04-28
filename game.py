@@ -4,6 +4,15 @@ from countries import Countries
 from time import sleep
 import random
 
+metallic_Elements = 0
+timber = 0
+water = 0
+housing_Value = 0
+metallic_Alloys = 0
+electronics_Value = 0
+min = 1
+max = 6
+dice_Value = 0
 
 class Player:
 
@@ -21,15 +30,7 @@ class Game:
         transform_resources = [housing, metallic_alloys, electronics] 
         countries = Countries(myCountry, transform_resources,
                                   initialStatePath, resourcePath)   
-        metallic_Elements = 0
-        timber = 0
-        water = 0
-        housing_Value = 0
-        metallic_Alloys = 0
-        electronics_Value = 0
-        min = 1
-        max = 6
-        dice_Value = 0
+        
         
 
         p1 = Player("Player")
@@ -147,7 +148,7 @@ class Game:
         sleep(5)
         print("\nTime to Play!!!! Roll the dice!")
         sleep(2)
-        while true:
+        
             dice_Value = random.randint(min, max)
             print("\nYou rolled ", dice_Value)
 
