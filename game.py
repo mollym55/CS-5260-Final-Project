@@ -2,6 +2,7 @@ from resources import housing, metallic_alloys, electronics
 from transfer import Transfer
 from countries import Countries
 from time import sleep
+import random
 
 class Player:
 
@@ -27,6 +28,9 @@ class Game:
         housing_Value = 0
         metallic_Alloys = 0
         electronics_Value = 0
+        min = 1
+        max = 6
+        dice_Value = 0
 
         p1 = Player("Player")
         state = countries.getStateStatus()
@@ -142,6 +146,9 @@ class Game:
         
         sleep(5)
         print("\nTime to Play!!!! Roll the dice!")
+        sleep(2)
+        dice_Value = random.randint(min, max)
+        print("\nYou rolled ", dice_Value)
         
         
     play()
