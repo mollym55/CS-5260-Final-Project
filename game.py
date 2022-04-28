@@ -212,7 +212,7 @@ class Game:
        
         
         
-    play()
+    v = play()
     
     
     
