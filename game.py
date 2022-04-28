@@ -53,7 +53,21 @@ class Game:
         print("5. Erewhon")
         choose_Country = int(input(""))
         if choose_Country == 1:
-            atlantis()
+            myCountry = "Atlantis"
+            print("\nYour country will be ", myCountry)
+            metallic_Elements = 700
+            timber = 2000
+            water = 50
+            housing_Value = 100
+            metallic_Alloys = 200
+            electronics_Value = 800
+            print("\nYour Resources (in millions):")
+            print("Metallic Elements -> ", metallic_Elements)
+            print("Timber -> ", timber)
+            print("Water -> ", water)
+            print("Housing -> ", housing_Value)
+            print("Metallic Alloys -> ", metallic_Alloys)
+            print("Electronics -> ", electronics_Value)
         elif choose_Country == 2:
             myCountry = "Brobdingnag"
             print("\nYour country will be ", myCountry)
@@ -86,22 +100,7 @@ class Game:
         
     play()
     
-    def atlantis():
-        myCountry = "Atlantis"
-        print("\nYour country will be ", myCountry)
-        metallic_Elements = 700
-        timber = 2000
-        water = 50
-        housing_Value = 100
-        metallic_Alloys = 200
-        electronics_Value = 800
-        print("\nYour Resources (in millions):")
-        print("Metallic Elements -> ", metallic_Elements)
-        print("Timber -> ", timber)
-        print("Water -> ", water)
-        print("Housing -> ", housing_Value)
-        print("Metallic Alloys -> ", metallic_Alloys)
-        print("Electronics -> ", electronics_Value)
+    
     
     def exit():
         print("\nBye! Hope you had fun :)")
