@@ -213,7 +213,7 @@ class Game:
         print("2. No, I'm bored lol")
         choose_Dice = int(input(""))
         if choose_Dice == 1:
-            
+            print("")
         if choose_Dice == 2:
             exit()
             
