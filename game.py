@@ -4,15 +4,15 @@ from countries import Countries
 from time import sleep
 import random
 
-        metallic_Elements = 0
-        timber = 0
-        water = 0
-        housing_Value = 0
-        metallic_Alloys = 0
-        electronics_Value = 0
-        min = 1
-        max = 6
-        dice_Value = 0
+metallic_Elements = 0
+timber = 0
+water = 0
+housing_Value = 0
+metallic_Alloys = 0
+electronics_Value = 0
+min = 1
+max = 6
+dice_Value = 0
 class Player:
 
     def __init__(self, name):
