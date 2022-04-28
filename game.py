@@ -51,7 +51,7 @@ class Game:
         print("3. Carpania")
         print("4. Dinotopia")
         print("5. Erewhon")
-        choose_Country = input("")
+        choose_Country = int(input(""))
         if choose_Country == 1:
             atlantis()
         elif choose_Country == 2:
