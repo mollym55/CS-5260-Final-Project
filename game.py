@@ -166,15 +166,15 @@ class Game:
             print("Housing -> ", housing_Value)
             print("Metallic Alloys -> ", metallic_Alloys)
             print("Electronics -> ", electronics_Value)
-        if dice_Value == 2:
+        elif dice_Value == 2:
             print("Oh no! -200 to Timber")
             timber -= 200
             if timber <= 0:
                 print("You don't have anymore timber. The Wumpus won!")
-        if dice_Value == 3:
-        if dice_Value == 4:
-        if dice_Value == 5:
-        if dice_Value == 6:
+        elif dice_Value == 3:
+        elif dice_Value == 4:
+        elif dice_Value == 5:
+        elif dice_Value == 6:
         
        
         
