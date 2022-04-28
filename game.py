@@ -202,9 +202,11 @@ class Game:
                 print("You don't have anymore electronics. The Wumpus won!")
                 exit()
         elif dice_Value == 6:
-            print("No change!")
+            print("Free Pass!")
         
         print("\nWhat to roll again?")
+        print("1. Yes")
+        print("2. No, I'm bored lol")
         
        
         
