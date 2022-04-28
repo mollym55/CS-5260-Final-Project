@@ -12,9 +12,6 @@ class Player:
         
 class Game:
     
-    def exit1():
-        print("\nBye! Hope you had fun :)")
-    
     def play():
         #Randomly chose my country to be Carpania
         myCountry = "Carpania"
@@ -143,7 +140,7 @@ class Game:
             print("Electronics -> ", electronics_Value)
             
         else:
-            exit1()
+            exit()
         
         sleep(5)
         print("\nTime to Play!!!! Roll the dice!")
@@ -171,13 +168,13 @@ class Game:
             timber -= 200
             if timber <= 0:
                 print("You don't have anymore timber. The Wumpus won!")
-                exit1()
+                exit()
         elif dice_Value == 3:
             print("You stepped in the Wumpus Dark Hole! You lose :(")
-            exit1()
+            exit()
         elif dice_Value == 4:
             print("Whoop Whoop! You defeated the Wumpus!")
-            exit1()
+            exit()
         elif dice_Value == 5:
             print("Boo, -300 to all resources")
             metallic_Elements -= 300
@@ -188,22 +185,22 @@ class Game:
             electronics_Value -= 300
             if metallic_Elements <= 0:
                 print("You don't have anymore metallic elements. The Wumpus won!")
-                exit1()
+                exit()
             if timber <= 0:
                 print("You don't have anymore timber. The Wumpus won!")
-                exit1()
+                exit()
             if water <= 0:
                 print("You don't have anymore water. The Wumpus won!")
-                exit1()
+                exit()
             if housing_Value <= 0:
                 print("You don't have anymore housing. The Wumpus won!")
-                exit1()
+                exit()
             if metallic_Alloys <= 0:
                 print("You don't have anymore metallic alloys. The Wumpus won!")
-                exit1()
+                exit()
             if electronics_Value <= 0:
                 print("You don't have anymore electronics. The Wumpus won!")
-                exit1()
+                exit()
         elif dice_Value == 6:
             print("No change!")
         
