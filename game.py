@@ -171,10 +171,6 @@ class Game:
             timber -= 200
             if timber <= 0:
                 print("You don't have anymore timber. The Wumpus won!")
-        elif dice_Value == 3:
-        elif dice_Value == 4:
-        elif dice_Value == 5:
-        elif dice_Value == 6:
         
        
         
