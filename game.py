@@ -3,6 +3,7 @@ from transfer import Transfer
 from countries import Countries
 from time import sleep
 import random
+from goto import goto, comefrom, label
 
 class Player:
 
@@ -149,6 +150,33 @@ class Game:
         sleep(2)
         dice_Value = random.randint(min, max)
         print("\nYou rolled ", dice_Value)
+        
+        if dice_Value == 1:
+            print("Yay! +500 to each resource")
+            metallic_Elements += 500
+            timber += 500
+            water += 500
+            housing_Value += 500
+            metallic_Alloys += 500
+            electronics_Value += 500
+            print("\nYour Resources (in millions):")
+            print("Metallic Elements -> ", metallic_Elements)
+            print("Timber -> ", timber)
+            print("Water -> ", water)
+            print("Housing -> ", housing_Value)
+            print("Metallic Alloys -> ", metallic_Alloys)
+            print("Electronics -> ", electronics_Value)
+         if dice_Value == 2:
+            print("Oh no! -200 to Timber")
+            timber -= 200
+            if timber <= 0:
+                print("You don't have anymore timber. The Wumpus won!")
+         if dice_Value == 3:
+         if dice_Value == 4:
+         if dice_Value == 5:
+         if dice_Value == 6:
+        
+       
         
         
     play()
