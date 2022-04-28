@@ -142,7 +142,7 @@ class Game:
             print("Electronics -> ", electronics_Value)
             
         else:
-            exit()
+            exit1()
         
         sleep(5)
         print("\nTime to Play!!!! Roll the dice!")
@@ -170,10 +170,13 @@ class Game:
             timber -= 200
             if timber <= 0:
                 print("You don't have anymore timber. The Wumpus won!")
+                exit1()
         elif dice_Value == 3:
             print("You stepped in the Wumpus Dark Hole! You lose :(")
+            exit1()
         elif dice_Value == 4:
             print("Whoop Whoop! You defeated the Wumpus!")
+            exit1()
         elif dice_Value == 5:
             print("Boo, -300 to all resources")
             metallic_Elements -= 300
@@ -184,18 +187,26 @@ class Game:
             electronics_Value -= 300
             if metallic_Elements <= 0:
                 print("You don't have anymore metallic elements. The Wumpus won!")
+                exit1()
             if timber <= 0:
                 print("You don't have anymore timber. The Wumpus won!")
+                exit1()
             if water <= 0:
                 print("You don't have anymore water. The Wumpus won!")
+                exit1()
             if housing_Value <= 0:
                 print("You don't have anymore housing. The Wumpus won!")
+                exit1()
             if metallic_Alloys <= 0:
                 print("You don't have anymore metallic alloys. The Wumpus won!")
+                exit1()
             if electronics_Value <= 0:
                 print("You don't have anymore electronics. The Wumpus won!")
+                exit1()
         elif dice_Value == 6:
             print("No change!")
+        
+        print("\nWhat to roll again?")
         
        
         
@@ -203,7 +214,7 @@ class Game:
     play()
     
     
-    def exit():
+    def exit1():
         print("\nBye! Hope you had fun :)")
     
         
