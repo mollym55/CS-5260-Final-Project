@@ -216,9 +216,9 @@ class Game:
             print("1. Yes")
             print("2. No, I'm bored lol")
             choose_Dice = int(input(""))
-            sleep(5)
+            #sleep(5)
             if choose_Dice == 1:
-                print("")
+               running = True
             if choose_Dice == 2:
                 exit()
 
