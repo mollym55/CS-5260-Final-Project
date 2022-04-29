@@ -41,6 +41,9 @@ class Game:
         print("\nHello Player! This is the Beware of the Wumpus Game!")
         sleep(2)
         print("\n")
+        print("           /\          ")
+        print("      /\  /  \         ")
+        print("     /  \/    \        ")
         print("     ------------      ")
         print("    /  @    @    \     ")
         print("   /      v       \    ")
@@ -171,13 +174,13 @@ class Game:
             print("Oh no! -200 to Timber")
             timber -= 200
             if timber <= 0:
-                print("You don't have anymore timber. The Wumpus won!")
+                print(myCountry, " don't have anymore timber. The Wumpus won!")
                 exit()
         elif dice_Value == 3:
-            print("You stepped in the Wumpus Dark Hole! You lose :(")
+            print("You stepped in the Wumpus Dark Hole!", myCountry ," loses :(")
             exit()
         elif dice_Value == 4:
-            print("Whoop Whoop! You defeated the Wumpus!")
+            print("Whoop Whoop!", myCountry ,"defeated the Wumpus!")
             exit()
         elif dice_Value == 5:
             print("Boo, -300 to all resources")
@@ -188,22 +191,22 @@ class Game:
             metallic_Alloys -= 300
             electronics_Value -= 300
             if metallic_Elements <= 0:
-                print("You don't have anymore metallic elements. The Wumpus won!")
+                print(myCountry," doesn't have anymore metallic elements. The Wumpus won!")
                 exit()
             if timber <= 0:
-                print("You don't have anymore timber. The Wumpus won!")
+                print(myCountry," doesn't have anymore timber. The Wumpus won!")
                 exit()
             if water <= 0:
-                print("You don't have anymore water. The Wumpus won!")
+                print(myCountry," doesn't have anymore water. The Wumpus won!")
                 exit()
             if housing_Value <= 0:
-                print("You don't have anymore housing. The Wumpus won!")
+                print(myCountry," doesn't have anymore housing. The Wumpus won!")
                 exit()
             if metallic_Alloys <= 0:
-                print("You don't have anymore metallic alloys. The Wumpus won!")
+                print("myCountry," doesn't have anymore metallic alloys. The Wumpus won!")
                 exit()
             if electronics_Value <= 0:
-                print("You don't have anymore electronics. The Wumpus won!")
+                print(myCountry," doesn't have anymore electronics. The Wumpus won!")
                 exit()
         elif dice_Value == 6:
             print("Free Pass!")
