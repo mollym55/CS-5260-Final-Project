@@ -53,12 +53,12 @@ class Countries:
     def getExpectedUtility(self, currentState, nextState, length, action):
         startQuality = utils.calculate_state_quality(self.stateStatus, self.myCountry, self.resourcePath)
         endQuality = utils.calculate_state_quality(nextState, self.myCountry, self.resourcePath)
-        gamma = 0.9
+        gamma = 0.95
         reward = endQuality - startQuality
         discountedReward = (gamma ** length) * reward
         probabilitySuccess = utils.calculate_success_probability(
             self.myCountry, currentState, nextState, action, self.resourcePath)
-        # Chose a constant of -1 for the cost of the failure
+        # Chose a constant of -10 for the cost of the failure
         failure_cost = -discountedReward * -10
         eu = probabilitySuccess * discountedReward + \
             (1 - probabilitySuccess) * failure_cost
