@@ -187,25 +187,24 @@ class Game:
             elif dice_Value == 3:
                 print("You stepped in the Wumpus Dark Hole!", myCountry ,"loses :(")
                 print("\n Want another turn to defeat the Wumpus????")
-                    print("1. Yes, I need to defeat the Wumpus now!")
-                    print("2. No, I'd rather quit and be a loser!")
-                    play_Again = int(input(""))
-                    if play_Again == 1:
-                        running = True
-                    if play_Again == 2:
-                        exit()
+                print("1. Yes, I need to defeat the Wumpus now!")
+                print("2. No, I'd rather quit and be a loser!")
+                play_Again = int(input(""))
+                if play_Again == 1:
+                    running = True
+                if play_Again == 2:
+                    exit()
 
             elif dice_Value == 4:
                 print("Whoop Whoop!", myCountry ,"defeated the Wumpus!")
-                exit()
                 print("\n Want another turn to defeat the Wumpus????")
-                    print("1. Yes, I need to defeat the Wumpus now!")
-                    print("2. No, I'd rather quit while on top!")
-                    play_Again = int(input(""))
-                    if play_Again == 1:
-                        running = True
-                    if play_Again == 2:
-                        exit()
+                print("1. Yes, I need to defeat the Wumpus now!")
+                print("2. No, I'd rather quit while on top!")
+                play_Again = int(input(""))
+                if play_Again == 1:
+                    running = True
+                if play_Again == 2:
+                    exit()
             elif dice_Value == 5:
                 print("Boo, -300 to all resources")
                 metallic_Elements -= 300
