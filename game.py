@@ -203,7 +203,7 @@ class Game:
                 print(myCountry," doesn't have anymore housing. The Wumpus won!")
                 exit()
             if metallic_Alloys <= 0:
-                print("myCountry," doesn't have anymore metallic alloys. The Wumpus won!")
+                print(myCountry," doesn't have anymore metallic alloys. The Wumpus won!")
                 exit()
             if electronics_Value <= 0:
                 print(myCountry," doesn't have anymore electronics. The Wumpus won!")
