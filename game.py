@@ -21,7 +21,7 @@ class Player:
     def __init__(self, name):
         self.name = name
         
-# Game Class allows the player to player Beware of the Wumpus!      
+# Game Class allows the player to play Beware of the Wumpus!      
 class Game:
     
     def play():
@@ -34,7 +34,7 @@ class Game:
                                   initialStatePath, resourcePath)   
         
         
-
+        #Create player object
         p1 = Player("Player")
         state = countries.getStateStatus()
         print("\nCountry Initial States")
@@ -55,7 +55,6 @@ class Game:
         print("  \/\/\/\/\/\/\/\/\/   ")
         print("\n")
         print("THE WUMPUS IS COMING FOR YOU!!!!")
-        #print("\nYour country will be Carpania!")
         sleep(2)
         print("\nWhat country do you choose?")
         print("1. Atlantis")
@@ -67,6 +66,7 @@ class Game:
         if choose_Country == 1:
             myCountry = "Atlantis"
             print("\nYour country will be ", myCountry)
+            #Atlantis Initial States
             metallic_Elements = 700
             timber = 2000
             water = 50
@@ -83,6 +83,7 @@ class Game:
         elif choose_Country == 2:
             myCountry = "Brobdingnag"
             print("\nYour country will be ", myCountry)
+             #Brobdingnag Initial States
             metallic_Elements = 300
             timber = 1200
             water = 200
@@ -99,6 +100,7 @@ class Game:
         elif choose_Country == 3:
             myCountry = "Carpania"
             print("\nYour country will be ", myCountry)
+            #Carpania Initial States
             metallic_Elements = 100
             timber = 300
             water = 320
@@ -116,6 +118,7 @@ class Game:
         elif choose_Country == 4:
             myCountry = "Dinotopia"
             print("\nYour country will be ", myCountry)
+            #Dinotopia Initial States
             metallic_Elements = 200
             timber = 200
             water = 75
@@ -133,6 +136,7 @@ class Game:
         elif choose_Country == 5:
             myCountry = "Erewhon"
             print("\nYour country will be ", myCountry)
+            #Erewhon Initial States
             metallic_Elements = 500
             timber = 1700
             water = 30
@@ -158,6 +162,7 @@ class Game:
             dice_Value = random.randint(min, max)
             print("\nYou rolled ", dice_Value)
 
+            #logic if you roll a 1 
             if dice_Value == 1:
                 print("Yay! +500 to each resource for", myCountry)
                 metallic_Elements += 500
@@ -173,40 +178,26 @@ class Game:
                 print("Housing -> ", housing_Value)
                 print("Metallic Alloys -> ", metallic_Alloys)
                 print("Electronics -> ", electronics_Value)
+            
+            #logic if you roll a 2 
             elif dice_Value == 2:
                 print("Oh no! -200 to Timber")
                 timber -= 200
                 if timber < 0:
                     print(myCountry, "doesn't have anymore timber. The Wumpus won!")
-                    print("\n Want another turn to defeat the Wumpus????")
-                    print("1. Yes, I need to defeat the Wumpus now!")
-                    print("2. No, I'd rather quit and be a loser!")
-                    play_Again = int(input(""))
-                    if play_Again == 1:
-                        running = True
-                    if play_Again == 2:
-                        exit()
+                    exit()
+             
+            #logic if you roll a 3 
             elif dice_Value == 3:
                 print("You stepped in the Wumpus Dark Hole!", myCountry ,"loses :(")
-                print("\n Want another turn to defeat the Wumpus????")
-                print("1. Yes, I need to defeat the Wumpus now!")
-                print("2. No, I'd rather quit and be a loser!")
-                play_Again = int(input(""))
-                if play_Again == 1:
-                    running = True
-                if play_Again == 2:
-                    exit()
+                exit()
 
+            #logic if you roll a 4 
             elif dice_Value == 4:
                 print("Whoop Whoop!", myCountry ,"defeated the Wumpus!")
-                print("\n Want another turn to defeat the Wumpus????")
-                print("1. Yes, I need to defeat the Wumpus now!")
-                print("2. No, I'd rather quit while on top!")
-                play_Again = int(input(""))
-                if play_Again == 1:
-                    running = True
-                if play_Again == 2:
-                    exit()
+                exit()
+             
+            #logic if you roll a 5
             elif dice_Value == 5:
                 print("Boo, -300 to all resources")
                 metallic_Elements -= 300
@@ -215,69 +206,30 @@ class Game:
                 housing_Value -= 300
                 metallic_Alloys -= 300
                 electronics_Value -= 300
-                if metallic_Elements <= 0:
+                if metallic_Elements < 0:
                     print(myCountry,"doesn't have anymore metallic elements. The Wumpus won!")
-                    print("\n Want another turn to defeat the Wumpus????")
-                    print("1. Yes, I need to defeat the Wumpus now!")
-                    print("2. No, I'd rather quit and be a loser!")
-                    play_Again = int(input(""))
-                    if play_Again == 1:
-                        running = True
-                    if play_Again == 2:
-                        exit()
-                if timber <= 0:
+                    exit()
+                if timber < 0:
                     print(myCountry,"doesn't have anymore timber. The Wumpus won!")
-                    print("\n Want another turn to defeat the Wumpus????")
-                    print("1. Yes, I need to defeat the Wumpus now!")
-                    print("2. No, I'd rather quit and be a loser!")
-                    play_Again = int(input(""))
-                    if play_Again == 1:
-                        running = True
-                    if play_Again == 2:
-                        exit()
-                if water <= 0:
+                    exit()
+                if water < 0:
                     print(myCountry,"doesn't have anymore water. The Wumpus won!")
-                    print("\n Want another turn to defeat the Wumpus????")
-                    print("1. Yes, I need to defeat the Wumpus now!")
-                    print("2. No, I'd rather quit and be a loser!")
-                    play_Again = int(input(""))
-                    if play_Again == 1:
-                        running = True
-                    if play_Again == 2:
-                        exit()
-                if housing_Value <= 0:
+                    exit()
+                if housing_Value < 0:
                     print(myCountry,"doesn't have anymore housing. The Wumpus won!")
-                    print("\n Want another turn to defeat the Wumpus????")
-                    print("1. Yes, I need to defeat the Wumpus now!")
-                    print("2. No, I'd rather quit and be a loser!")
-                    play_Again = int(input(""))
-                    if play_Again == 1:
-                        running = True
-                    if play_Again == 2:
-                        exit()
-                if metallic_Alloys <= 0:
+                    exit()
+                if metallic_Alloys < 0:
                     print(myCountry,"doesn't have anymore metallic alloys. The Wumpus won!")
-                    print("\n Want another turn to defeat the Wumpus????")
-                    print("1. Yes, I need to defeat the Wumpus now!")
-                    print("2. No, I'd rather quit and be a loser!")
-                    play_Again = int(input(""))
-                    if play_Again == 1:
-                        running = True
-                    if play_Again == 2:
-                        exit()
-                if electronics_Value <= 0:
+                    exit()
+                if electronics_Value < 0:
                     print(myCountry,"doesn't have anymore electronics. The Wumpus won!")
-                    print("\n Want another turn to defeat the Wumpus????")
-                    print("1. Yes, I need to defeat the Wumpus now!")
-                    print("2. No, I'd rather quit and be a loser!")
-                    play_Again = int(input(""))
-                    if play_Again == 1:
-                        running = True
-                    if play_Again == 2:
-                        exit()
+                    exit()
+             
+            #logic if you roll a 6
             elif dice_Value == 6:
                 print("Free Pass!")
 
+            #Asks player if they want another round
             print("\nWhat to roll again?")
             print("1. Yes")
             print("2. No, I'm bored lol")
@@ -286,7 +238,8 @@ class Game:
                running = True
             if choose_Dice == 2:
                 exit()
-  
+    
+    #play Beware of the Wumpus!!!!
     play()
     
     
