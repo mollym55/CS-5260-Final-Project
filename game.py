@@ -14,12 +14,14 @@ min = 1
 max = 6
 dice_Value = 0
 
+# Player Class creates a player for the game
 class Player:
-
+    
+    # __init___ constructs Player object
     def __init__(self, name):
         self.name = name
         
-        
+# Game Class allows the player to player Beware of the Wumpus!      
 class Game:
     
     def play():
@@ -35,9 +37,9 @@ class Game:
 
         p1 = Player("Player")
         state = countries.getStateStatus()
-        #print("\nCountry Initial States")
-        #print("-----------------------\n")
-        #print(state)
+        print("\nCountry Initial States")
+        print("-----------------------\n")
+        print(state)
         print("\nHello Player! This is the Beware of the Wumpus Game!")
         sleep(2)
         print("\n")
