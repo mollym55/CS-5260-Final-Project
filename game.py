@@ -195,6 +195,7 @@ class Game:
             #logic if you roll a 4 
             elif dice_Value == 4:
                 print("Whoop Whoop!", myCountry ,"defeated the Wumpus!")
+                print("\n W I N N E R")
                 exit()
              
             #logic if you roll a 5
