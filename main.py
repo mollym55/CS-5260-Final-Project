@@ -74,7 +74,7 @@ print("Time elapsed: " + str(time3) + " seconds")
 # Scatter Plot to show runtimes per each example 
 timeExamples = [time1,time2,time3]
 plt.scatter(example, timeExamples)
-plt.title("Runtime per each Example 0.95 Gamma")
+plt.title("Runtime per each Example 0.99 Gamma")
 plt.xlabel("Example")
 plt.ylabel("Runtime in Seconds")
 plt.show()
