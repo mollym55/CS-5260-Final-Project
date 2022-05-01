@@ -25,7 +25,6 @@ class Player:
 class Game:
     
     def play():
-        #Randomly chose my country to be Carpania
         myCountry = ""
         initialStatePath = "initial_countries.xlsx"
         resourcePath = "Sample-Resources.xlsx"
