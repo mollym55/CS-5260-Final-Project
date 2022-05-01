@@ -26,7 +26,7 @@ class Game:
     
     def play():
         #Randomly chose my country to be Carpania
-        myCountry = "Carpania"
+        myCountry = ""
         initialStatePath = "initial_countries.xlsx"
         resourcePath = "Sample-Resources.xlsx"
         transform_resources = [housing, metallic_alloys, electronics] 
@@ -185,11 +185,13 @@ class Game:
                 timber -= 200
                 if timber < 0:
                     print(myCountry, "doesn't have anymore timber. The Wumpus won!")
+                    print("\n L O S E R")
                     exit()
              
             #logic if you roll a 3 
             elif dice_Value == 3:
                 print("You stepped in the Wumpus Dark Hole!", myCountry ,"loses :(")
+                print("\n L O S E R")
                 exit()
 
             #logic if you roll a 4 
@@ -209,21 +211,27 @@ class Game:
                 electronics_Value -= 300
                 if metallic_Elements < 0:
                     print(myCountry,"doesn't have anymore metallic elements. The Wumpus won!")
+                     print("\n L O S E R")
                     exit()
                 if timber < 0:
                     print(myCountry,"doesn't have anymore timber. The Wumpus won!")
+                     print("\n L O S E R")
                     exit()
                 if water < 0:
                     print(myCountry,"doesn't have anymore water. The Wumpus won!")
+                     print("\n L O S E R")
                     exit()
                 if housing_Value < 0:
                     print(myCountry,"doesn't have anymore housing. The Wumpus won!")
+                     print("\n L O S E R")
                     exit()
                 if metallic_Alloys < 0:
                     print(myCountry,"doesn't have anymore metallic alloys. The Wumpus won!")
+                     print("\n L O S E R")
                     exit()
                 if electronics_Value < 0:
                     print(myCountry,"doesn't have anymore electronics. The Wumpus won!")
+                     print("\n L O S E R")
                     exit()
              
             #logic if you roll a 6
