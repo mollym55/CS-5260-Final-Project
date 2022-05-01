@@ -5,6 +5,10 @@
             pip install pandas
             pip install openpyxl
             python3 -m pip install -U matplotlib
-## Execution Steps:
+## Execution Steps for Project Part 1:
 ### 1. Run the code:
             python3 main.py
+
+## Execution Steps for Project Part 2:
+### 1. Run the code:
+            python3 game.py
